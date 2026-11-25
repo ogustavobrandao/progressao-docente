@@ -1,0 +1,34 @@
+{
+  "name": "progressao-docente",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sistema para auxiliar os professores da UFAPE no processo de progressão.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently -n FRONTEND,BACKEND -c cyan,green \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "npm --prefix frontend start",
+    "dev:backend": "npm --prefix backend run dev",
+    "install:frontend": "npm --prefix frontend install",
+    "install:backend": "npm --prefix backend install",
+    "install:all": "npm install && npm run install:frontend && npm run install:backend",
+    "build:frontend": "npm --prefix frontend run build",
+    "build:backend": "npm --prefix backend exec -- tsc",
+    "build": "npm run build:frontend && npm run build:backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ogustavobrandao/progressao-docente.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ogustavobrandao/progressao-docente/issues"
+  },
+  "homepage": "https://github.com/ogustavobrandao/progressao-docente#readme",
+  "devDependencies": {
+    "concurrently": "^10.0.7"
+  }
+}
